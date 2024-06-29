@@ -16,8 +16,8 @@ def augment_image_and_mask(image, mask, saturation_factor):
     return adjusted_image, flipped_mask
 
 # Set the paths to your image and mask folders
-image_folder = "/content/drive/MyDrive/model.v3.10/images/train"
-mask_folder = "/content/drive/MyDrive/model.v3.10/masks/train"
+image_folder = ""
+mask_folder = ""
 
 # Set the augmentation parameters
 saturation_factor = 2.0  # Adjust the saturation factor as needed
