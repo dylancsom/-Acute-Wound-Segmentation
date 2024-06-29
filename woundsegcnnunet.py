@@ -109,10 +109,11 @@ if __name__ == '__main__':
 
 batch_size = 6
 target_size = (256, 256)
-train_images_path = '/content/drive/MyDrive/model.v3.10/images/train'
-train_masks_path = '/content/drive/MyDrive/model.v3.10/masks/train'
-val_images_path = '/content/drive/MyDrive/model.v3.10/images/val'
-val_masks_path = '/content/drive/MyDrive/model.v3.10/masks/val'
+
+train_images_path = ''
+train_masks_path = ''
+val_images_path = ''
+val_masks_path = ''
 
 train_generator = partial(image_mask_generator, batch_size=batch_size, target_size=(256, 256), input_format=['jpg', 'jpeg'], mask_format='png')
 train_dataset = tf.data.Dataset.from_generator(
@@ -203,6 +204,7 @@ with custom_object_scope({
                   metrics=['accuracy', dice_coef, weighted_dice_coef, dice_coef_loss, weighted_dice_coef_loss, iou, iou_loss, combined_dice_iou_loss])
 epochs = 150
 batch_size_num = 6
+
 # Modified dataset paths
 train_generator = partial(image_mask_generator, target_size=target_size, input_format='jpg', mask_format='png')
 
@@ -280,5 +282,5 @@ plt.tight_layout()
 plt.show()
 
 # Save the model
-model_path = '/content/drive/MyDrive/model.v3.10/trials/june11v9.keras'
+model_path = ''
 model.save(model_path)
