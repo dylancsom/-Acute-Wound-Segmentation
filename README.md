@@ -1,1 +1,1 @@
-# -Acute-Wound-Segmentation
+# Acute-Wound-Segmentation
