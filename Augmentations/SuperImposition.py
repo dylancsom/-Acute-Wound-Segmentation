@@ -3,10 +3,10 @@ import numpy as np
 from PIL import Image
 
 # Load the input image and mask
-input_image_path = "/content/drive/MyDrive/model.v3.10/AugmentTesting/images/superimposend1.jpg"
-input_mask_path = "/content/drive/MyDrive/model.v3.10/AugmentTesting/masks/superimposend1.png"
-background_image_path = "/content/drive/MyDrive/model.v3.10/AugmentTesting/bloodpool/bp1.jpg"
-output_dir = "/content/drive/MyDrive/model.v3.10/AugmentTesting"
+input_image_path = ""
+input_mask_path = ""
+background_image_path = ""
+output_dir = ""
 
 input_image = cv2.imread(input_image_path)
 input_mask = cv2.imread(input_mask_path, 0)  # Load mask as grayscale
